@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reel 1 - Frame 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 1080px;
+            height: 1920px;
+            background: #000000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 50px, rgba(45, 0, 82, 0.1) 50px, rgba(45, 0, 82, 0.1) 51px),
+                repeating-linear-gradient(90deg, transparent, transparent 50px, rgba(45, 0, 82, 0.1) 50px, rgba(45, 0, 82, 0.1) 51px);
+            opacity: 0.3;
+        }
+        
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #FFD700;
+            border-radius: 50%;
+            box-shadow: 0 0 4px #FFD700;
+        }
+        
+        .star:nth-child(1) { top: 20%; left: 25%; opacity: 0.7; }
+        .star:nth-child(2) { top: 35%; left: 75%; opacity: 0.5; }
+        .star:nth-child(3) { top: 50%; left: 40%; opacity: 0.8; }
+        .star:nth-child(4) { top: 70%; left: 60%; opacity: 0.6; }
+        .star:nth-child(5) { top: 85%; left: 30%; opacity: 0.9; }
+        
+        .container {
+            z-index: 10;
+            text-align: center;
+            padding: 0 60px;
+        }
+        
+        .text-large {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 160px;
+            color: #FF0000;
+            text-shadow: 
+                0 0 30px rgba(255, 0, 0, 1),
+                0 0 60px rgba(255, 0, 0, 0.7),
+                3px 3px 0 rgba(255, 215, 0, 0.6);
+            letter-spacing: 8px;
+            margin-bottom: 60px;
+            line-height: 1;
+        }
+        
+        .text-muerte {
+            font-family: 'Inter', sans-serif;
+            font-size: 180px;
+            font-weight: 900;
+            color: #FF0000;
+            text-shadow: 
+                0 0 40px rgba(255, 0, 0, 1),
+                0 0 80px rgba(255, 0, 0, 0.8),
+                5px 5px 0 rgba(255, 215, 0, 0.7);
+            letter-spacing: 4px;
+        }
+        
+        .icon-fail {
+            font-size: 200px;
+            position: absolute;
+            top: 200px;
+            right: 150px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars">
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+    
+    <div class="icon-fail">❌</div>
+    
+    <div class="container">
+        <div class="text-large">
+            LANDER<br>
+            GENÉRICO
+        </div>
+        <div class="text-muerte">
+            = MORTE
+        </div>
+    </div>
+</body>
+</html>
